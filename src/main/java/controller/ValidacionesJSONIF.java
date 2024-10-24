@@ -5,12 +5,14 @@
 package controller;
 
 import model.Propietario;
+import model.Empleado;
 
 /**
  *
  * @author yusti
  */
 public interface ValidacionesJSONIF {
-    public int validar(String usuario, String llave);
+    public int validar(String usuario, String llave, String tipoUsuario);
     public Propietario modelarUsuario(String usuario, String contraseña);
+    public Empleado modelarEmpleado(String usuario, String contraseña);
 }

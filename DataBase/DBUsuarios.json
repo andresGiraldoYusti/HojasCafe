@@ -22,5 +22,18 @@
             "usuario": "KarolG123",
             "contraseña": "123456789"
         }
+    ],
+    "empleados": [
+        {
+            "nombre": "Andres Felipe",
+            "email": "AndresFelipe@hojascafe.com",
+            "celular": "3225996226",
+            "id": "1020491920",
+            "cargo": "Administrador",
+            "fechaInicio": "2024-10-24",
+            "calificacion": 10.0,
+            "usuario": "andresAdmin",
+            "contraseña": "123456789"
+        }
     ]
 }

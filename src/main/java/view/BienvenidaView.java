@@ -48,6 +48,7 @@ public class BienvenidaView extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipadx = 391;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(5, 0, 0, 0);
         jPanel1.add(jLabel1, gridBagConstraints);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 26)); // NOI18N
@@ -73,10 +74,10 @@ public class BienvenidaView extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        gridBagConstraints.ipadx = 231;
+        gridBagConstraints.ipadx = 258;
         gridBagConstraints.ipady = -15;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 235, 35, 0);
+        gridBagConstraints.insets = new java.awt.Insets(18, 235, 21, 0);
         jPanel1.add(jButtonSalir, gridBagConstraints);
 
         jButtonIniciarSesion.setBackground(new java.awt.Color(255, 164, 101));
@@ -90,7 +91,7 @@ public class BienvenidaView extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        gridBagConstraints.ipadx = 90;
+        gridBagConstraints.ipadx = 97;
         gridBagConstraints.ipady = -15;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 235, 0, 0);
@@ -99,6 +100,11 @@ public class BienvenidaView extends javax.swing.JFrame {
         jButtonConoce.setBackground(new java.awt.Color(255, 164, 101));
         jButtonConoce.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jButtonConoce.setText("Conoce Hojas Café");
+        jButtonConoce.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConoceActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -144,6 +150,15 @@ public class BienvenidaView extends javax.swing.JFrame {
         IniciarSesionFrame.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_jButtonIniciarSesionActionPerformed
+
+    private void jButtonConoceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConoceActionPerformed
+        // TODO add your handling code here:
+        ConocerHojasCafeView conocerHojasCafeFrame = new ConocerHojasCafeView();
+        conocerHojasCafeFrame.setVisible(true);
+        conocerHojasCafeFrame.pack();
+        conocerHojasCafeFrame.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_jButtonConoceActionPerformed
 
     /**
      * @param args the command line arguments

@@ -1,11 +1,14 @@
-C:\Users\yusti\OneDrive\Documentos\NetBeansProjects\HojasCafe\src\main\java\model\ValidacionesJSON.java
-C:\Users\yusti\OneDrive\Documentos\NetBeansProjects\HojasCafe\src\main\java\view\IniciarSesionView.java
-C:\Users\yusti\OneDrive\Documentos\NetBeansProjects\HojasCafe\src\main\java\view\PrincipalUsuarioView.java
-C:\Users\yusti\OneDrive\Documentos\NetBeansProjects\HojasCafe\src\main\java\controller\ValidacionesJSONIF.java
-C:\Users\yusti\OneDrive\Documentos\NetBeansProjects\HojasCafe\src\main\java\model\Persona.java
-C:\Users\yusti\OneDrive\Documentos\NetBeansProjects\HojasCafe\src\main\java\controller\ModificarJSONIF.java
-C:\Users\yusti\OneDrive\Documentos\NetBeansProjects\HojasCafe\src\main\java\model\Multa.java
-C:\Users\yusti\OneDrive\Documentos\NetBeansProjects\HojasCafe\src\main\java\view\BienvenidaView.java
-C:\Users\yusti\OneDrive\Documentos\NetBeansProjects\HojasCafe\src\main\java\com\mycompany\hojascafe\HojasCafe.java
-C:\Users\yusti\OneDrive\Documentos\NetBeansProjects\HojasCafe\src\main\java\model\Propietario.java
-C:\Users\yusti\OneDrive\Documentos\NetBeansProjects\HojasCafe\src\main\java\model\ModificarJSON.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/model/ValidacionesJSON.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/view/BienvenidaView.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/model/ModificarJSON.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/model/Multa.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/view/PrincipalUsuarioView.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/view/ConocerHojasCafeView.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/model/Empleado.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/model/Propietario.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/model/Persona.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/com/mycompany/hojascafe/HojasCafe.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/view/IniciarSesionView.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/view/PrincipalEmpleadoView.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/controller/ValidacionesJSONIF.java
+/home/estudiantes/andres.giraldoy/Documentos/hojas cafe/HojasCafe/src/main/java/controller/ModificarJSONIF.java
