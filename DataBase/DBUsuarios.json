@@ -1,0 +1,26 @@
+{
+    "propietarios": [
+	{
+            "nombre": "JBalvin",
+            "email": "JBalvin@hojascafe.com",
+            "celular": "1234567890",
+            "id": "000000115",
+            "salario": 70000000.0,
+            "profesion": "Cantante",
+            "multas": [],
+            "usuario": "JBalvin123",
+            "contraseña": "123456789"
+	},
+        {
+            "nombre": "Karol G",
+            "email": "KarolG@hojascafe.com",
+            "celular": "0987654321",
+            "id": "000000117",
+            "salario": 70000000.0,
+            "profesion": "Cantante",
+            "multas": [],
+            "usuario": "KarolG123",
+            "contraseña": "123456789"
+        }
+    ]
+}
