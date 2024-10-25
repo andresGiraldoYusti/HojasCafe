@@ -18,7 +18,29 @@
             "id": "000000117",
             "salario": 70000000.0,
             "profesion": "Cantante",
-            "multas": [],
+            "multas": [
+                {
+                    "idMulta": "1",
+                    "fechaMulta": "2024-10-24",
+                    "fechaEvento": "2024-10-24",
+                    "lugar": "Conjunto Hojas Cafe",
+                    "descripcion": "Por contaminacion",
+                    "valor": 43000000.0,
+                    "mensaje": "No vuelva a contaminar el conjunto",
+                    "evidencia": "Adjunto evidencia"
+                },
+                {
+                    "idMulta": "2",
+                    "fechaMulta": "2024-09-24",
+                    "fechaEvento": "2024-09-24",
+                    "lugar": "Propiedad de KarolG",
+                    "descripcion": "Por mucho ruido",
+                    "valor": 57000000.0,
+                    "mensaje": "Tener consideracion con los vecinos y no molestarlos con el ruido",
+                    "evidencia": "Adjunto evidencia"
+                }
+                
+            ],
             "usuario": "KarolG123",
             "contraseña": "123456789"
         }

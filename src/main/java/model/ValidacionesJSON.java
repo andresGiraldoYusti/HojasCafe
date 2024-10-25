@@ -5,6 +5,7 @@
 package model;
 
 import org.json.JSONArray;
+import java.util.ArrayList;
 
 import controller.ValidacionesJSONIF;
 import java.time.LocalDate;
@@ -40,13 +41,33 @@ public class ValidacionesJSON implements ValidacionesJSONIF {
     public Propietario modelarUsuario(String usuario, String contraseña) {
         int user = validar(usuario, "usuario", "propietario");
         int pw = validar(contraseña, "contraseña", "propietario");
-        if ( user != -1 && pw != -1) return new Propietario(
+        
+        if ( user != -1 && pw != -1) {
+            JSONArray multas = jsonArrayUsuarios.getJSONObject(user).getJSONArray("multas");
+            ArrayList<Multa> listaMultas = new ArrayList<Multa>();
+            if (multas.length() > 0) {
+                for (int i = 0; i < multas.length(); i++) {
+                    listaMultas.add(new Multa(
+                        multas.getJSONObject(i).getString("idMulta"),
+                        LocalDate.parse(multas.getJSONObject(i).getString("fechaMulta")),
+                        LocalDate.parse(multas.getJSONObject(i).getString("fechaEvento")),
+                        multas.getJSONObject(i).getString("lugar"),
+                        multas.getJSONObject(i).getString("descripcion"),
+                        multas.getJSONObject(i).getDouble("valor"),
+                        multas.getJSONObject(i).getString("mensaje"),
+                        multas.getJSONObject(i).getString("evidencia")
+                    ));
+                }
+            }
+            return new Propietario(
                 jsonArrayUsuarios.getJSONObject(user).getDouble("salario"),
                 jsonArrayUsuarios.getJSONObject(user).getString("profesion"),
                 jsonArrayUsuarios.getJSONObject(user).getString("nombre"),
                 jsonArrayUsuarios.getJSONObject(user).getString("email"),
                 jsonArrayUsuarios.getJSONObject(user).getString("celular"),
-                jsonArrayUsuarios.getJSONObject(user).getString("id"));
+                jsonArrayUsuarios.getJSONObject(user).getString("id"),
+                listaMultas);
+        }
         return null;
     }
     

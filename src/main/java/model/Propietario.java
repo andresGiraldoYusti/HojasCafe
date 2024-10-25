@@ -16,11 +16,26 @@ public class Propietario extends Persona{
     private String profesion;
     private ArrayList<Multa> multas;
 
-    public Propietario(double salario, String profesion, String nombre, String email, String celular, String id) {
+    public Propietario(double salario, String profesion, String nombre, String email, String celular, String id, ArrayList<Multa> multas) {
         super(nombre, email, celular, id);
         this.salario = salario;
         this.profesion = profesion;
+        this.multas = multas;
     }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public String getProfesion() {
+        return profesion;
+    }
+
+    public ArrayList<Multa> getMultas() {
+        return multas;
+    }
+    
+    
     
     
 }

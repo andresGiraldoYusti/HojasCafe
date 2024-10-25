@@ -117,6 +117,11 @@ public class ConocerHojasCafeView extends javax.swing.JFrame {
 
     private void jButtonConoceInstalaciones1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConoceInstalaciones1ActionPerformed
         // TODO add your handling code here:
+        ConocerInquilinosView conocerInquilinosFrame = new ConocerInquilinosView();
+        conocerInquilinosFrame.setVisible(true);
+        conocerInquilinosFrame.pack();
+        conocerInquilinosFrame.setLocationRelativeTo(null);
+        dispose();
     }//GEN-LAST:event_jButtonConoceInstalaciones1ActionPerformed
 
     private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed

@@ -18,6 +18,7 @@ public class PrincipalUsuarioView extends javax.swing.JFrame {
     public PrincipalUsuarioView(Propietario propietario) {
         initComponents();
         this.propietario = propietario;
+        System.out.println(propietario.getMultas());
         jLabelTitulo.setText("Bienvenid@ " + propietario.getNombre());
     }
 
@@ -81,7 +82,7 @@ public class PrincipalUsuarioView extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.ipadx = 213;
+        gridBagConstraints.ipadx = 189;
         gridBagConstraints.ipady = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 199, 0, 0);
@@ -98,7 +99,7 @@ public class PrincipalUsuarioView extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        gridBagConstraints.ipadx = 141;
+        gridBagConstraints.ipadx = 129;
         gridBagConstraints.ipady = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 199, 0, 0);
@@ -115,7 +116,7 @@ public class PrincipalUsuarioView extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        gridBagConstraints.ipadx = 238;
+        gridBagConstraints.ipadx = 216;
         gridBagConstraints.ipady = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 199, 0, 0);
@@ -137,15 +138,26 @@ public class PrincipalUsuarioView extends javax.swing.JFrame {
 
     private void jButtonZonasComunesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonZonasComunesActionPerformed
         // TODO add your handling code here:
-        
+        ZonasComunesView zonasComunesFrame = new ZonasComunesView();
+        zonasComunesFrame.setVisible(true);
+        zonasComunesFrame.pack();
+        zonasComunesFrame.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonZonasComunesActionPerformed
 
     private void jButtonMultasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMultasActionPerformed
         // TODO add your handling code here:
+        VisualizarMultasView visualizarMultasFrame = new VisualizarMultasView(propietario);
+        visualizarMultasFrame.setVisible(true);
+        visualizarMultasFrame.pack();
+        visualizarMultasFrame.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonMultasActionPerformed
 
     private void jButtonFacturaTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFacturaTotalActionPerformed
         // TODO add your handling code here:
+        FacturaTotalView facturaTotalFrame = new FacturaTotalView(propietario);
+        facturaTotalFrame.setVisible(true);
+        facturaTotalFrame.pack();
+        facturaTotalFrame.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonFacturaTotalActionPerformed
 
     private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed

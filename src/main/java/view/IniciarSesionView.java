@@ -174,6 +174,10 @@ public class IniciarSesionView extends javax.swing.JFrame {
         
         Propietario propietario = validar.modelarUsuario(jTextFieldNombreUsuario.getText(), jPasswordFieldContraseña.getText());
         Empleado empleado = validar.modelarEmpleado(jTextFieldNombreUsuario.getText(), jPasswordFieldContraseña.getText());
+        
+        System.out.println("Propietario: " + propietario);
+        System.out.println("Empleado: " + empleado);
+        
         if (propietario != null) {
             System.out.println("Ha ingresado con exito.");
             PrincipalUsuarioView principalUsuarioFrame = new PrincipalUsuarioView(propietario);
