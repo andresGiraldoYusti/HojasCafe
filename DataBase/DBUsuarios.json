@@ -1,61 +1,71 @@
 {
-    "propietarios": [
-	{
-            "nombre": "JBalvin",
-            "email": "JBalvin@hojascafe.com",
-            "celular": "1234567890",
-            "id": "000000115",
-            "salario": 70000000.0,
-            "profesion": "Cantante",
-            "multas": [],
-            "usuario": "JBalvin123",
-            "contraseña": "123456789"
-	},
+  "propietarios": [
+    {
+      "nombre": "JBalvin",
+      "email": "JBalvin@hojascafe.com",
+      "celular": "1234567890",
+      "id": "000000115",
+      "salario": 70000000,
+      "profesion": "Cantante",
+      "multas": [],
+      "usuario": "JBalvin123",
+      "contraseña": "123456789"
+    },
+    {
+      "nombre": "Karol G",
+      "email": "KarolG@hojascafe.com",
+      "celular": "0987654321",
+      "id": "000000117",
+      "salario": 70000000,
+      "profesion": "Cantante",
+      "multas": [
         {
-            "nombre": "Karol G",
-            "email": "KarolG@hojascafe.com",
-            "celular": "0987654321",
-            "id": "000000117",
-            "salario": 70000000.0,
-            "profesion": "Cantante",
-            "multas": [
-                {
-                    "idMulta": "1",
-                    "fechaMulta": "2024-10-24",
-                    "fechaEvento": "2024-10-24",
-                    "lugar": "Conjunto Hojas Cafe",
-                    "descripcion": "Por contaminacion",
-                    "valor": 43000000.0,
-                    "mensaje": "No vuelva a contaminar el conjunto",
-                    "evidencia": "Adjunto evidencia"
-                },
-                {
-                    "idMulta": "2",
-                    "fechaMulta": "2024-09-24",
-                    "fechaEvento": "2024-09-24",
-                    "lugar": "Propiedad de KarolG",
-                    "descripcion": "Por mucho ruido",
-                    "valor": 57000000.0,
-                    "mensaje": "Tener consideracion con los vecinos y no molestarlos con el ruido",
-                    "evidencia": "Adjunto evidencia"
-                }
-                
-            ],
-            "usuario": "KarolG123",
-            "contraseña": "123456789"
-        }
-    ],
-    "empleados": [
+          "idMulta": "1",
+          "fechaMulta": "2024-10-24",
+          "fechaEvento": "2024-10-24",
+          "lugar": "Conjunto Hojas Cafe",
+          "descripcion": "Por contaminacion",
+          "valor": 43000000,
+          "mensaje": "No vuelva a contaminar el conjunto",
+          "evidencia": "Adjunto evidencia"
+        },
         {
-            "nombre": "Andres Felipe",
-            "email": "AndresFelipe@hojascafe.com",
-            "celular": "3225996226",
-            "id": "1020491920",
-            "cargo": "Administrador",
-            "fechaInicio": "2024-10-24",
-            "calificacion": 10.0,
-            "usuario": "andresAdmin",
-            "contraseña": "123456789"
+          "idMulta": "2",
+          "fechaMulta": "2024-09-24",
+          "fechaEvento": "2024-09-24",
+          "lugar": "Propiedad de KarolG",
+          "descripcion": "Por mucho ruido",
+          "valor": 57000000,
+          "mensaje": "Tener consideracion con los vecinos y no molestarlos con el ruido",
+          "evidencia": "Adjunto evidencia"
         }
-    ]
+      ],
+      "usuario": "KarolG123",
+      "contraseña": "123456789"
+    },
+    {
+      "nombre": "Bad Bunny",
+      "email": "BadBunny@hojascafe.com",
+      "celular": "1548795463",
+      "id": "1564894687",
+      "salario": 90000000,
+      "profesion": "Trapero",
+      "multas": [],
+      "usuario": "BadBunny123",
+      "contraseña": "123456789"
+    }
+  ],
+  "empleados": [
+    {
+      "nombre": "Andres Felipe",
+      "email": "AndresFelipe@hojascafe.com",
+      "celular": "3225996226",
+      "id": "1020491920",
+      "cargo": "Administrador",
+      "fechaInicio": "2024-10-24",
+      "calificacion": 10,
+      "usuario": "andresAdmin",
+      "contraseña": "123456789"
+    }
+  ]
 }

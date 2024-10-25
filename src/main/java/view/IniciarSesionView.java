@@ -21,6 +21,8 @@ import java.time.LocalDate;
 public class IniciarSesionView extends javax.swing.JFrame {
     ModificarJSONIF json;
     ValidacionesJSONIF validar;
+    JSONArray jsonArrayPropietarios;
+    JSONArray jsonArrayEmpleados;
 
     /**
      * Creates new form IniciarSesionView
@@ -28,8 +30,8 @@ public class IniciarSesionView extends javax.swing.JFrame {
     public IniciarSesionView() {
         initComponents();
         json = new ModificarJSON("DataBase/DBUsuarios.json");
-        JSONArray jsonArrayPropietarios = json.leerJSON("propietarios");
-        JSONArray jsonArrayEmpleados = json.leerJSON("empleados");
+        jsonArrayPropietarios = json.leerJSON("propietarios");
+        jsonArrayEmpleados = json.leerJSON("empleados");
         if (jsonArrayPropietarios == null && jsonArrayEmpleados == null) {
             dispose();
         } else {
@@ -188,7 +190,7 @@ public class IniciarSesionView extends javax.swing.JFrame {
             
         } else if (empleado != null) {
             System.out.println("Ha ingresado con exito.");
-            PrincipalEmpleadoView principalEmpleadoFrame = new PrincipalEmpleadoView();
+            PrincipalEmpleadoView principalEmpleadoFrame = new PrincipalEmpleadoView(jsonArrayPropietarios, jsonArrayEmpleados);
             principalEmpleadoFrame.setVisible(true);
             principalEmpleadoFrame.pack();
             principalEmpleadoFrame.setLocationRelativeTo(null);

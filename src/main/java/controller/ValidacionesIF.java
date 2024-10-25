@@ -4,13 +4,10 @@
  */
 package controller;
 
-import org.json.JSONArray;
-
 /**
  *
- * @author yusti
+ * @author andres.giraldoy
  */
-public interface ModificarJSONIF {
-    public JSONArray leerJSON(String clase);
-    public void escribirJSON(JSONArray propietarios, JSONArray empleados);
+public interface ValidacionesIF {
+    public boolean comprarRegistroPropietario();
 }

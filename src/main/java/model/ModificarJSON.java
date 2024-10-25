@@ -38,5 +38,21 @@ public class ModificarJSON implements ModificarJSONIF {
         }
         return null;
     }
+    
+    @Override
+    public void escribirJSON(JSONArray propietarios, JSONArray empleados) {
+        try {
+            JSONArray p = new JSONArray();
+            JSONArray e = new JSONArray();
+            JSONObject jsonFinal = new JSONObject();
+            p.put(propietarios);
+            e.put(empleados);
+            jsonFinal.put("propietarios", propietarios).put("empleados", empleados);
+            Files.write(Paths.get(file), jsonFinal.toString(2).getBytes());
+            System.out.println("Archivo JSON creado exitosamente en " + file);
+        } catch (IOException e) {
+            System.out.println("Error al escribir en el archivo " + e);
+        }
+    }
 }
 
