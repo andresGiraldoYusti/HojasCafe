@@ -53,6 +53,17 @@
       "multas": [],
       "usuario": "BadBunny123",
       "contraseña": "123456789"
+    },
+    {
+      "nombre": "Goku",
+      "email": "Goku@hojascafe.com",
+      "celular": "1548789321",
+      "id": "0000000001",
+      "salario": 330000000,
+      "profesion": "Peleador",
+      "multas": [],
+      "usuario": "Kakaroto123",
+      "contraseña": "123456789"
     }
   ],
   "empleados": [
@@ -65,6 +76,17 @@
       "fechaInicio": "2024-10-24",
       "calificacion": 10,
       "usuario": "andresAdmin",
+      "contraseña": "123456789"
+    },
+    {
+      "nombre": "Diana Margot",
+      "email": "DianaMargot@hojascafe.com",
+      "celular": "999999999",
+      "id": "548789845614",
+      "cargo": "Profesora",
+      "fechaInicio": "2024-10-24",
+      "calificacion": 10,
+      "usuario": "DianaMargot123",
       "contraseña": "123456789"
     }
   ]

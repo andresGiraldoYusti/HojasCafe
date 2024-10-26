@@ -190,7 +190,7 @@ public class IniciarSesionView extends javax.swing.JFrame {
             
         } else if (empleado != null) {
             System.out.println("Ha ingresado con exito.");
-            PrincipalEmpleadoView principalEmpleadoFrame = new PrincipalEmpleadoView(jsonArrayPropietarios, jsonArrayEmpleados);
+            PrincipalEmpleadoView principalEmpleadoFrame = new PrincipalEmpleadoView(jsonArrayPropietarios, jsonArrayEmpleados, empleado);
             principalEmpleadoFrame.setVisible(true);
             principalEmpleadoFrame.pack();
             principalEmpleadoFrame.setLocationRelativeTo(null);

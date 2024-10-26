@@ -7,6 +7,7 @@ package model;
 import controller.ValidacionesIF;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import org.json.JSONArray;
 
 /**
  *
@@ -37,10 +38,34 @@ public class Validaciones implements ValidacionesIF {
                 return false;
             }
         }
-        if (!compararStrings(datos.get(7), datos.get(8))) {
+        if (!compararStrings(datos.get(datos.size()-2), datos.get(datos.size()-1))) {
             JOptionPane.showMessageDialog(null, "Las contraseñas no coinciden.", "Advertencia", JOptionPane.INFORMATION_MESSAGE);
             return false;
         }
         return true;
+    }
+    
+    @Override
+    public boolean compararRegistroMulta() {
+        for (int i = 0; i < datos.size(); i++) {
+            if (comprarStringVacio(datos.get(i))) {
+                JOptionPane.showMessageDialog(null, "Debe de llenar todos los campos.", "Advertencia", JOptionPane.INFORMATION_MESSAGE);
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    @Override
+    public int buscarUsuario(JSONArray propietarios) {
+        for (int i = 0; i < propietarios.length(); i++) {
+            System.out.println(propietarios.get(i));
+            if (propietarios.getJSONObject(i).getString("id").equals(datos.get(datos.size()-1))) {
+                return i;
+            }
+        }
+        
+        JOptionPane.showMessageDialog(null, "El usuario con la ID: " + datos.get(datos.size()-1) + " no se encontro.", "Advertencia", JOptionPane.INFORMATION_MESSAGE);
+        return -1;
     }
 }

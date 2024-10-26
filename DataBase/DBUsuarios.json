@@ -7,7 +7,28 @@
       "id": "000000115",
       "salario": 70000000,
       "profesion": "Cantante",
-      "multas": [],
+      "multas": [
+        {
+          "idMulta": "3",
+          "fechaMulta": "2024-11-01",
+          "fechaEvento": "2024-11-01",
+          "lugar": "Conjunto Hojas Cafe",
+          "descripcion": "Por estacionar en zona prohibida",
+          "valor": 25000000,
+          "mensaje": "No estacionar en zonas no autorizadas",
+          "evidencia": "Adjunto evidencia"
+        },
+        {
+          "idMulta": "5",
+          "fechaMulta": "2024-10-25",
+          "fechaEvento": "2024-10-15",
+          "lugar": "Parque de niños",
+          "descripcion": "Por cantar mal",
+          "valor": 4000000,
+          "mensaje": "Aprenda a cantar",
+          "evidencia": "Adjunto la evidencia"
+        }
+      ],
       "usuario": "JBalvin123",
       "contraseña": "123456789"
     },
@@ -50,8 +71,30 @@
       "id": "1564894687",
       "salario": 90000000,
       "profesion": "Trapero",
-      "multas": [],
+      "multas": [
+        {
+          "idMulta": "4",
+          "fechaMulta": "2024-10-25",
+          "fechaEvento": "2024-10-25",
+          "lugar": "Su residencia",
+          "descripcion": "Por sapo",
+          "valor": 4.3E21,
+          "mensaje": "Deje de ser sapo",
+          "evidencia": "Adjunto evidencia"
+        }
+      ],
       "usuario": "BadBunny123",
+      "contraseña": "123456789"
+    },
+    {
+      "nombre": "Goku",
+      "email": "Goku@hojascafe.com",
+      "celular": "1548789321",
+      "id": "0000000001",
+      "salario": 330000000,
+      "profesion": "Peleador",
+      "multas": [],
+      "usuario": "Kakaroto123",
       "contraseña": "123456789"
     }
   ],
@@ -65,6 +108,28 @@
       "fechaInicio": "2024-10-24",
       "calificacion": 10,
       "usuario": "andresAdmin",
+      "contraseña": "123456789"
+    },
+    {
+      "nombre": "Diana Margot",
+      "email": "DianaMargot@hojascafe.com",
+      "celular": "999999999",
+      "id": "548789845614",
+      "cargo": "Profesora",
+      "fechaInicio": "2024-10-24",
+      "calificacion": 10,
+      "usuario": "DianaMargot123",
+      "contraseña": "123456789"
+    },
+    {
+      "nombre": "Giraldo Yusti",
+      "email": "GiraldoYusti@hojascafe.com",
+      "celular": "3225996226",
+      "id": "15648941231586",
+      "cargo": "Estudiante",
+      "fechaInicio": "2024-10-25",
+      "calificacion": 10,
+      "usuario": "GiraldoYusti123",
       "contraseña": "123456789"
     }
   ]

@@ -4,6 +4,8 @@
  */
 package view;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import model.ModificarJSON;
@@ -13,17 +15,15 @@ import org.json.JSONObject;
 
 /**
  *
- * @author andres.giraldoy
+ * @author yusti
  */
-public class RegistrarPropietariosView extends javax.swing.JFrame {
-
+public class RegistrarEmpleadoView extends javax.swing.JFrame {
     JSONArray propietarios;
     JSONArray empleados;
-    
     /**
-     * Creates new form RegistrarUsuariosView
+     * Creates new form RegistrarEmpleado
      */
-    public RegistrarPropietariosView(JSONArray propietarios, JSONArray empleados) {
+    public RegistrarEmpleadoView(JSONArray propietarios, JSONArray empleados) {
         initComponents();
         this.propietarios = propietarios;
         this.empleados = empleados;
@@ -45,26 +45,25 @@ public class RegistrarPropietariosView extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jButtonSalir = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
         jTextFieldNombre = new javax.swing.JTextField();
         jTextFieldEmail = new javax.swing.JTextField();
         jTextFieldCelular = new javax.swing.JTextField();
         jTextFieldID = new javax.swing.JTextField();
-        jTextFieldSalario = new javax.swing.JTextField();
-        jTextFieldProfesion = new javax.swing.JTextField();
+        jTextFieldCargo = new javax.swing.JTextField();
         jTextFieldUsuario = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
         jPasswordFieldContraseña = new javax.swing.JPasswordField();
         jPasswordFieldCC = new javax.swing.JPasswordField();
-        jButtonRegistrarPropietario = new javax.swing.JButton();
+        jButtonRegistrarEmpleado = new javax.swing.JButton();
+        jButtonSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jLabel1.setText("Registrar propietario de Hojas Cafe");
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Registrar empleado de Hojas Cafe");
 
         jLabel2.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jLabel2.setText("Nombre:");
@@ -79,10 +78,7 @@ public class RegistrarPropietariosView extends javax.swing.JFrame {
         jLabel5.setText("ID:");
 
         jLabel6.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
-        jLabel6.setText("Salario:");
-
-        jLabel7.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
-        jLabel7.setText("Profesion:");
+        jLabel6.setText("Cargo:");
 
         jLabel8.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jLabel8.setText("Usuario:");
@@ -90,14 +86,8 @@ public class RegistrarPropietariosView extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jLabel9.setText("Contraseña:");
 
-        jButtonSalir.setBackground(new java.awt.Color(188, 172, 161));
-        jButtonSalir.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButtonSalir.setText("Salir");
-        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSalirActionPerformed(evt);
-            }
-        });
+        jLabel10.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jLabel10.setText("Confirmar Contraseña:");
 
         jTextFieldNombre.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
 
@@ -112,27 +102,36 @@ public class RegistrarPropietariosView extends javax.swing.JFrame {
 
         jTextFieldID.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
 
-        jTextFieldSalario.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
-
-        jTextFieldProfesion.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jTextFieldCargo.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
 
         jTextFieldUsuario.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
-
-        jLabel10.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
-        jLabel10.setText("Confirmar Contraseña:");
 
         jPasswordFieldContraseña.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
 
         jPasswordFieldCC.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jPasswordFieldCC.setToolTipText("");
-
-        jButtonRegistrarPropietario.setBackground(new java.awt.Color(255, 164, 101));
-        jButtonRegistrarPropietario.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButtonRegistrarPropietario.setText("Registrar");
-        jButtonRegistrarPropietario.setToolTipText("");
-        jButtonRegistrarPropietario.addActionListener(new java.awt.event.ActionListener() {
+        jPasswordFieldCC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRegistrarPropietarioActionPerformed(evt);
+                jPasswordFieldCCActionPerformed(evt);
+            }
+        });
+
+        jButtonRegistrarEmpleado.setBackground(new java.awt.Color(255, 164, 101));
+        jButtonRegistrarEmpleado.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButtonRegistrarEmpleado.setText("Registrar");
+        jButtonRegistrarEmpleado.setToolTipText("");
+        jButtonRegistrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistrarEmpleadoActionPerformed(evt);
+            }
+        });
+
+        jButtonSalir.setBackground(new java.awt.Color(188, 172, 161));
+        jButtonSalir.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButtonSalir.setText("Salir");
+        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalirActionPerformed(evt);
             }
         });
 
@@ -140,43 +139,37 @@ public class RegistrarPropietariosView extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextFieldID, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldSalario, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldProfesion, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldUsuario, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldID, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
                             .addComponent(jTextFieldEmail)
                             .addComponent(jTextFieldCelular)
+                            .addComponent(jTextFieldNombre)
+                            .addComponent(jTextFieldCargo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
+                            .addComponent(jTextFieldUsuario, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPasswordFieldContraseña, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPasswordFieldCC, javax.swing.GroupLayout.Alignment.LEADING)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButtonRegistrarPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(47, 47, 47)
+                        .addComponent(jButtonRegistrarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(272, 272, 272))
+                        .addComponent(jButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,11 +195,7 @@ public class RegistrarPropietariosView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextFieldSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jTextFieldProfesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
@@ -219,77 +208,80 @@ public class RegistrarPropietariosView extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(jPasswordFieldCC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(52, 52, 52)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonRegistrarPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(39, Short.MAX_VALUE))
+                    .addComponent(jButtonRegistrarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
-        // TODO add your handling code here:
-        dispose();
-    }//GEN-LAST:event_jButtonSalirActionPerformed
-
     private void jTextFieldCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCelularActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldCelularActionPerformed
 
-    private void jButtonRegistrarPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarPropietarioActionPerformed
+    private void jPasswordFieldCCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldCCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordFieldCCActionPerformed
+
+    private void jButtonRegistrarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarEmpleadoActionPerformed
         // TODO add your handling code here:
         ArrayList<String> listaDatos = new ArrayList<>();
         listaDatos.add(jTextFieldNombre.getText());
         listaDatos.add(jTextFieldEmail.getText());
         listaDatos.add(jTextFieldCelular.getText());
         listaDatos.add(jTextFieldID.getText());
-        listaDatos.add(jTextFieldSalario.getText());
-        listaDatos.add(jTextFieldProfesion.getText());
+        listaDatos.add(jTextFieldCargo.getText());
         listaDatos.add(jTextFieldUsuario.getText());
         listaDatos.add(jPasswordFieldContraseña.getText());
         listaDatos.add(jPasswordFieldCC.getText());
-        
+
         Validaciones validacion = new Validaciones(listaDatos);
         if (validacion.comprarRegistroPropietario() == false) {
             dispose();
         } else {
-            propietarios.put(new JSONObject()
-            .put("nombre", jTextFieldNombre.getText())
-            .put("email", jTextFieldEmail.getText())
-            .put("celular",jTextFieldCelular.getText())
-            .put("id",jTextFieldID.getText())
-            .put("salario", Double.parseDouble(jTextFieldSalario.getText()))
-            .put("profesion", jTextFieldProfesion.getText())
-            .put("multas", new JSONArray())
-            .put("usuario", jTextFieldUsuario.getText())
-            .put("contraseña", jPasswordFieldContraseña.getText())
+            empleados.put(new JSONObject()
+                .put("nombre", jTextFieldNombre.getText())
+                .put("email", jTextFieldEmail.getText())
+                .put("celular",jTextFieldCelular.getText())
+                .put("id",jTextFieldID.getText())
+                .put("cargo", jTextFieldCargo.getText())
+                .put("fechaInicio", LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))
+                .put("calificacion", 10)
+                .put("usuario", jTextFieldUsuario.getText())
+                .put("contraseña", jPasswordFieldContraseña.getText())
             );
-            
+
             ModificarJSON json = new ModificarJSON("DataBase/DBUsuarios.json");
             json.escribirJSON(propietarios, empleados);
             JOptionPane.showMessageDialog(null, "El usuario se ha creado con exito.", "Text", JOptionPane.INFORMATION_MESSAGE);
             dispose();
         }
-    }//GEN-LAST:event_jButtonRegistrarPropietarioActionPerformed
+    }//GEN-LAST:event_jButtonRegistrarEmpleadoActionPerformed
+
+    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jButtonSalirActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonRegistrarPropietario;
+    private javax.swing.JButton jButtonRegistrarEmpleado;
     private javax.swing.JButton jButtonSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -298,18 +290,16 @@ public class RegistrarPropietariosView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordFieldCC;
     private javax.swing.JPasswordField jPasswordFieldContraseña;
+    private javax.swing.JTextField jTextFieldCargo;
     private javax.swing.JTextField jTextFieldCelular;
     private javax.swing.JTextField jTextFieldEmail;
     private javax.swing.JTextField jTextFieldID;
     private javax.swing.JTextField jTextFieldNombre;
-    private javax.swing.JTextField jTextFieldProfesion;
-    private javax.swing.JTextField jTextFieldSalario;
     private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
 }

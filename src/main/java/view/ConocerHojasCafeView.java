@@ -29,7 +29,6 @@ public class ConocerHojasCafeView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButtonConoceInstalaciones = new javax.swing.JButton();
         jButtonConoceInstalaciones1 = new javax.swing.JButton();
         jButtonSalir = new javax.swing.JButton();
 
@@ -46,28 +45,12 @@ public class ConocerHojasCafeView extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 253;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(61, 0, 0, 0);
         jPanel1.add(jLabel1, gridBagConstraints);
-
-        jButtonConoceInstalaciones.setBackground(new java.awt.Color(255, 164, 101));
-        jButtonConoceInstalaciones.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButtonConoceInstalaciones.setText("Conoce nuestras instalaciones");
-        jButtonConoceInstalaciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonConoceInstalacionesActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipady = -1;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(84, 151, 0, 0);
-        jPanel1.add(jButtonConoceInstalaciones, gridBagConstraints);
 
         jButtonConoceInstalaciones1.setBackground(new java.awt.Color(255, 164, 101));
         jButtonConoceInstalaciones1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jButtonConoceInstalaciones1.setText("Conoce a nuestros inquilinos");
-        jButtonConoceInstalaciones1.setActionCommand("Conoce a nuestros inquilinos");
         jButtonConoceInstalaciones1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonConoceInstalaciones1ActionPerformed(evt);
@@ -75,10 +58,10 @@ public class ConocerHojasCafeView extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.ipadx = 17;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 40;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 151, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(46, 128, 0, 0);
         jPanel1.add(jButtonConoceInstalaciones1, gridBagConstraints);
 
         jButtonSalir.setBackground(new java.awt.Color(188, 172, 161));
@@ -91,10 +74,10 @@ public class ConocerHojasCafeView extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.ipadx = 304;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(17, 151, 34, 0);
+        gridBagConstraints.insets = new java.awt.Insets(40, 128, 44, 0);
         jPanel1.add(jButtonSalir, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -110,10 +93,6 @@ public class ConocerHojasCafeView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButtonConoceInstalacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConoceInstalacionesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonConoceInstalacionesActionPerformed
 
     private void jButtonConoceInstalaciones1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConoceInstalaciones1ActionPerformed
         // TODO add your handling code here:
@@ -135,7 +114,6 @@ public class ConocerHojasCafeView extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonConoceInstalaciones;
     private javax.swing.JButton jButtonConoceInstalaciones1;
     private javax.swing.JButton jButtonSalir;
     private javax.swing.JLabel jLabel1;

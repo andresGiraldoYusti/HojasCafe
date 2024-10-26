@@ -4,6 +4,7 @@
  */
 package view;
 
+import model.Empleado;
 import org.json.JSONArray;
 
 /**
@@ -18,10 +19,11 @@ public class PrincipalEmpleadoView extends javax.swing.JFrame {
     /**
      * Creates new form PrincipalEmpleadoView
      */
-    public PrincipalEmpleadoView(JSONArray propietarios, JSONArray empleados) {
+    public PrincipalEmpleadoView(JSONArray propietarios, JSONArray empleados, Empleado empleado) {
         initComponents();
         this.propietarios = propietarios;
         this.empleados = empleados;
+        jButtonRegistrarEmpleado.setVisible(empleado.getCargo().equals("Administrador"));
     }
 
     /**
@@ -38,6 +40,7 @@ public class PrincipalEmpleadoView extends javax.swing.JFrame {
         jButtonRegistrarPropietario = new javax.swing.JButton();
         jButtonMulta = new javax.swing.JButton();
         jButtonSalir = new javax.swing.JButton();
+        jButtonRegistrarEmpleado = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,6 +74,15 @@ public class PrincipalEmpleadoView extends javax.swing.JFrame {
             }
         });
 
+        jButtonRegistrarEmpleado.setBackground(new java.awt.Color(255, 164, 101));
+        jButtonRegistrarEmpleado.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButtonRegistrarEmpleado.setText("Registrar Empleado");
+        jButtonRegistrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistrarEmpleadoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -82,10 +94,12 @@ public class PrincipalEmpleadoView extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButtonSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonMulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonRegistrarPropietario))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonRegistrarPropietario)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jButtonSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonMulta, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE))
+                            .addComponent(jButtonRegistrarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -93,13 +107,15 @@ public class PrincipalEmpleadoView extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addComponent(jButtonRegistrarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonRegistrarPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonMulta, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addGap(28, 28, 28))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -126,6 +142,10 @@ public class PrincipalEmpleadoView extends javax.swing.JFrame {
 
     private void jButtonMultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMultaActionPerformed
         // TODO add your handling code here:
+        RealizarMultaView realizarMultaFrame = new RealizarMultaView(propietarios, empleados);
+        realizarMultaFrame.setVisible(true);
+        realizarMultaFrame.pack();
+        realizarMultaFrame.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonMultaActionPerformed
 
     private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
@@ -137,8 +157,17 @@ public class PrincipalEmpleadoView extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButtonSalirActionPerformed
 
+    private void jButtonRegistrarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarEmpleadoActionPerformed
+        // TODO add your handling code here:
+        RegistrarEmpleadoView registrarUsuarioFrame = new RegistrarEmpleadoView(propietarios, empleados);
+        registrarUsuarioFrame.setVisible(true);
+        registrarUsuarioFrame.pack();
+        registrarUsuarioFrame.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButtonRegistrarEmpleadoActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonMulta;
+    private javax.swing.JButton jButtonRegistrarEmpleado;
     private javax.swing.JButton jButtonRegistrarPropietario;
     private javax.swing.JButton jButtonSalir;
     private javax.swing.JLabel jLabel1;

@@ -22,6 +22,19 @@ public class Empleado extends Persona{
         this.fechaInicio = fechaInicio;
         this.calificacion = calificacion;
     }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public LocalDate getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public double getCalificacion() {
+        return calificacion;
+    }
+    
     
     
 }
